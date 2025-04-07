@@ -5,4 +5,14 @@
     <lastmod>2025-04-07</lastmod>
     <priority>1.00</priority>
   </url>
+  <url>
+    <loc>https://shrtylinks.vercel.app/privacidade.html</loc>
+    <lastmod>2025-04-07</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://shrtylinks.vercel.app/termosdeuso.html</loc>
+    <lastmod>2025-04-07</lastmod>
+    <priority>0.80</priority>
+  </url>
 </urlset>
