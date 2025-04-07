@@ -9,28 +9,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
     <meta name="google-adsense-account" content="ca-pub-9934969213706976">
-    <script>
-    function myFunction(event) {
-        event.preventDefault();  // Previne o comportamento padrão de submissão do formulário
-        
-        const valor = document.getElementById("flink").value;
-        
-        $.getJSON("https://is.gd/create.php?callback=?", {
-            url: valor,
-            format: 'json'
-        }).done(function(data) {
-            let novolink = data.shorturl;
-            if (novolink !== undefined) {
-                document.getElementById("h2resp").innerHTML = `</br><span>URL Curta: </span> <a href='${novolink}' target='_blank' style="color: #2c87c5;" id='uu'>${novolink}<a/><button onClick='nn()' style='background-color: transparent; border: none;'><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000003" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></button></br>`;
-            } else {
-                document.getElementById("h2resp").innerHTML = "</br><span style='color: red;'>Erro ao gerar link<span/></br>";
-            }
-        });
-    }
-
-    </script>
+    <script type='text/javascript' src='//pl26317228.effectiveratecpm.com/f8/46/c2/f846c2422f7c9c454ab31d54aea9a5b7.js'></script>
 </head>
 <body>
+    <script type="text/javascript">
+        atOptions = {
+            'key' : '5589db14bfaeac53720f9d439ca78fa5',
+            'format' : 'iframe',
+            'height' : 600,
+            'width' : 160,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/5589db14bfaeac53720f9d439ca78fa5/invoke.js"></script>
     <nav style="background-color: white; padding: 30px; position: fixed; top: 0; left: 0; width: 100%; display: flex; justify-content: center; align-items: center; gap: 5%; font-family: 'Poppins', sans-serif; font-weight: 500;">
         <a href="/index.html">Home</a>
         <a href="pages/privacidade.html">Política de Privacidade</a>
@@ -101,6 +92,26 @@ Com o encurtador de URL é possível criar um link encurtado fácil de compartil
         </div>
         
             </footer>
+            <script>
+                function myFunction(event) {
+                    event.preventDefault();  // Previne o comportamento padrão de submissão do formulário
+                    
+                    const valor = document.getElementById("flink").value;
+                    
+                    $.getJSON("https://is.gd/create.php?callback=?", {
+                        url: valor,
+                        format: 'json'
+                    }).done(function(data) {
+                        let novolink = data.shorturl;
+                        if (novolink !== undefined) {
+                            document.getElementById("h2resp").innerHTML = `</br><span>URL Curta: </span> <a href='${novolink}' target='_blank' style="color: #2c87c5;" id='uu'>${novolink}<a/><button onClick='nn()' style='background-color: transparent; border: none;'><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000003" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></button></br>`;
+                        } else {
+                            document.getElementById("h2resp").innerHTML = "</br><span style='color: red;'>Erro ao gerar link<span/></br>";
+                        }
+                    });
+                }
+            
+                </script>
             <script type='text/javascript' src='//pl26316905.effectiveratecpm.com/de/72/41/de724167a4038ed5145d76e542f5aa5d.js'></script>
 </body>
 </html>
