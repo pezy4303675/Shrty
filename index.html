@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-6616852784066177">
+    <title>Shrty</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+    <script>
+    function myFunction(event) {
+        event.preventDefault();  // Previne o comportamento padrão de submissão do formulário
+        
+        const valor = document.getElementById("flink").value;
+        
+        $.getJSON("https://is.gd/create.php?callback=?", {
+            url: valor,
+            format: 'json'
+        }).done(function(data) {
+            let novolink = data.shorturl;
+            if (novolink !== undefined) {
+                document.getElementById("h2resp").innerHTML = `</br><span>URL Curta: </span> <a href='${novolink}' target='_blank' style="color: #2c87c5;" id='uu'>${novolink}<a/><button onClick='nn()' style='background-color: transparent; border: none;'><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000003" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></button></br>`;
+            } else {
+                document.getElementById("h2resp").innerHTML = "</br><span style='color: red;'>Erro ao gerar link<span/></br>";
+            }
+        });
+    }
+
+    </script>
+</head>
+<body>
+    <nav style="background-color: white; padding: 30px; position: fixed; top: 0; left: 0; width: 100%; display: flex; justify-content: center; align-items: center; gap: 5%; font-family: 'Poppins', sans-serif; font-weight: 500;">
+        <a>Sobre-nos</a>
+        <a>Política de Privacidade</a>
+        <a>Termos de Uso</a>
+    </nav>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div style="height: 100vh; justify-content: center; align-items: center; display: flex;">
+    <br/>
+    <form id="myForm">
+        <h1 id="info" style="margin: a auto; color: white;margin: 0;
+        font: bold 36px 'maven pro', arial;
+        color: #333; letter-spacing: -1px; text-align: center;">Cole a URL para ser encurtada</h1>
+            <br/>
+        <div id="ww"> 
+        <input class="sinput" name="flink" id="flink"/>
+        <button onclick="myFunction(event)" class="sinput"><strong>Gerar link</strong></button>
+    </div>
+    <span style="font: 16px oxygen, arial;
+    color: #000;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0 0 0 2px;" id="h2resp"></span>
+    <br/>
+    <span style="font: 16px oxygen, arial;
+    color: #000;
+    line-height: 1.5;
+    text-align: left;
+    padding: 0 0 0 2px;">
+        Encurtador é uma ferramenta para encurtar URLs e gerar links curtos
+Com o encurtador de URL é possível criar um link encurtado fácil de compartilhar
+    </span>
+    </form>
+</div>
+    <footer style="width: 100vw; height: max-content; background-color: #465866;">
+
+        <div style="display: flex; width: 90%; justify-content: space-between; color: white; padding: 40px; font-family: 'Poppins', sans-serif;">
+        <div>
+        <ul   style="width: 35%; list-style: none;">
+          <li class="titleli">Sobre a SHRTY</li>
+          <br>
+          <br>
+          <li class="liser" style="color: rgba(233, 233, 233, 0.812);">Encurte seus links de forma rápida, simples e segura. Compartilhe URLs menores e mais fáceis de lembrar!</li>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; width: 40%;">
+        
+          <ul style="list-style: none;">
+            <li class="titleli">Política</li>
+          <br>
+          <br>
+            <a href="" style="color: rgba(233, 233, 233, 0.812); text-decoration: none;"> <li class="liser">Política de Privacidade</li></a>
+          <br>
+        <a href="" style="color: rgba(233, 233, 233, 0.812); text-decoration: none;">    <li class="liser">Termos de Uso</li></a>
+          </ul>
+
+          <ul style="list-style: none;">
+            <li class="titleli">Meu Github</li>
+          <br>
+          <br>
+          <a href="https://github.com/pezy4303675" style="color: rgba(233, 233, 233, 0.812); text-decoration: none;"> <li class="liser">Daniel Alfredo Nunes</li></a>
+          </ul>
+        </div>
+        
+        </div>
+        
+            </footer>
+</body>
+</html>
